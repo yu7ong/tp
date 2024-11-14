@@ -166,6 +166,15 @@ public class AddProductCommandTest {
         public boolean isProductAssignedToAnySupplier(Product product) {
             throw new AssertionError("This method should not be called.");
         };
+        @Override
+        public ObservableList<Supplier> getFilteredSupplierList() {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public ObservableList<Product> getFilteredProductList() {
+            throw new AssertionError("This method should not be called.");
+        }
     }
 
     /**

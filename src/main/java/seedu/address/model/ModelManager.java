@@ -181,7 +181,15 @@ public class ModelManager implements Model {
     }
 
     //=========== Filtered/Sorted Supplier/Product List Accessors ===========
+    @Override
+    public ObservableList<Supplier> getFilteredSupplierList() {
+        return filteredSuppliers;
+    }
 
+    @Override
+    public ObservableList<Product> getFilteredProductList() {
+        return filteredProducts;
+    }
     @Override
     public void updateFilteredSupplierList(Predicate<Supplier> predicate) {
         requireNonNull(predicate);
