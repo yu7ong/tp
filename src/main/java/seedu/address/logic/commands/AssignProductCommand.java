@@ -97,11 +97,11 @@ public class AssignProductCommand extends Command {
 
     private void assignProductToSupplier(Model model, Supplier supplier, Product product) {
         Set<Product> updatedProductList = new HashSet<>(supplier.getProducts());
-        updatedProductList.add(product);
 
         Product updatedProduct = new Product(product.getName(), product.getStockLevel(), product.getTags());
         updatedProduct.setSupplierName(supplier.getName());
 
+        updatedProductList.add(updatedProduct);
         Supplier updatedSupplier = new Supplier(
                 supplier.getName(), supplier.getPhone(), supplier.getEmail(),
                 supplier.getAddress(), supplier.getTags(), updatedProductList);
